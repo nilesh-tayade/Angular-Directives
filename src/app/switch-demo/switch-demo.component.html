@@ -1,0 +1,24 @@
+<div class="jumbotron">
+    <h1 class="text-center text-muted">Ng Switch Demo</h1>
+
+    <div class="form-group">
+        <label >Select </label>
+        <select class="form-control" id="switch" (change)="setValue($event)">
+          <option>Select</option>
+          <option value="one">One</option>
+          <option value="two">Two</option>
+          <option value="three">Three</option>
+          <option value="another">Default</option>
+        </select>
+      </div>
+
+<div [ngSwitch]="choose">
+ <h1 *ngSwitchCase="'one'">First</h1>
+ <h1 *ngSwitchCase="'two'">Second</h1>
+ <h1 *ngSwitchCase="'three'">Third</h1>
+ <h1 *ngSwitchDefault="'another'">Default</h1>
+
+
+</div>
+
+</div>

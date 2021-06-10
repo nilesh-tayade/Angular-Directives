@@ -1,0 +1,62 @@
+<div class="jumbotron">
+<h2 class="text-center text-primary">NgIF Demo</h2>
+
+<input type="radio" name="radio1" (click)="changeValue(true)">True
+<input type="radio" name="radio1" (click)="changeValue(false)">False
+
+<div *ngIf="isvalid">
+
+<p class="text-success">This is valid </p>
+</div>
+
+<div *ngIf="!isvalid">
+
+    <p class="text-danger">This is Not valid </p>
+    </div>
+<hr>
+
+
+    <h2 class="text-center text-primary">NgIF  With else Demo</h2>
+
+<input type="radio" name="radio2" (click)="changeValueElse(true)">True
+<input type="radio" name="radio2" (click)="changeValueElse(false)">False
+
+<div *ngIf="isvalidElse ;else elseblock">
+
+<p class="text-success">This is if Block </p>
+</div>
+
+<ng-template #elseblock>
+<div>
+    <p class="text-danger">This is else block </p>
+    </div>
+</ng-template>
+
+<hr>
+
+<h2 class="text-center text-primary">NgIF  With then and else Demo</h2>
+
+<input type="radio" name="radio3" (click)="changeValueThen(true)">True
+<input type="radio" name="radio3" (click)="changeValueThen(false)">False
+
+<div *ngIf="isvalidThen ;then thenblock1;else elseblock1">
+
+</div>
+
+<ng-template #thenblock1>
+    <div>
+        <p class="text-success">This is then block </p>
+        </div>
+    </ng-template>
+    
+
+<ng-template #elseblock1>
+<div>
+    <p class="text-danger">This is else block </p>
+    </div>
+</ng-template>
+
+
+</div>
+
+<hr>
